@@ -1,0 +1,24 @@
+<?php
+
+$Input="test123";
+echo  $Input,"<br>";
+
+echo "<br>";
+//This goes into the database
+
+
+
+
+
+$PwEncyprt=password_hash($password,PASSWORD_DEFAULT);
+
+
+//Check to see if its true
+$confirmation=password_verify("test123",$PwEncyprt);
+
+if($confirmation==1){
+    echo "<br>User exists";
+}
+else{
+    echo "<br>User dont";
+}

@@ -1,0 +1,92 @@
+
+    //check the input request method
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        //First name validation
+        if(empty($_POST["fname"]))
+        {
+
+            $firstName_error = " Frist Name is required";
+
+        }else
+        {
+             $firstName = cleanup_data($_POST["fname"]);
+            //check is name only contains letters and whitespace
+
+            if(!preg_match("/^[a-zA-Z ]*$/", $firstName))
+            {
+
+                 $firstName_error = "Only letters and white space allowed.";
+
+            }
+        }
+
+		if(empty($_POST["lname"]))
+        {
+
+             $lastName_error = " Last Name is required";
+
+        }else{
+
+             $lastName = cleanup_data($_POST["lname"]);
+            //check is name only contains letters and whitespace
+
+            if(!preg_match("/^[a-zA-Z ]*$/", $lastName))
+            {
+
+                 $lastName_error = "Only letters and white space allowed.";
+
+            }
+        }
+
+        //email validation
+        $db=getdb();
+
+        if(empty($_POST["email"]))
+        {
+
+             $email_error = "Email is required";
+
+        }else
+        {
+             $email = cleanup_data($_POST["email"]);
+            //check that email address is properly formatted
+
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+
+                $email_error = "Invalid email format";
+
+            }
+
+                $email = stripcslashes($email);    
+                $email = mysqli_real_escape_string($db, $email);  
+
+                $query="SELECT * FROM user WHERE email='$email'";
+                $result = mysqli_query($db, $query) ; 
+              
+                if(mysqli_num_rows($result) > 0){
+
+                    $email_error = "Sorry... email already taken"; 	
+                
+                }
+            
+        }       
+
+          if(empty($_POST["psw"])){
+            $password_error = "password is required";
+    }else{
+            $password = cleanup_data($_POST["psw"]);
+    }
+
+    if(empty($_POST["psw2"])){
+        $password2_error = "password2 is required";
+    }else{
+        $password2 = cleanup_data($_POST["psw2"]);
+    //check is name only contains letters and whitespace
+    if($password != $password2){
+            $password2_error = "password dont match";
+    }
+    }
+
+    }

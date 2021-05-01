@@ -1,0 +1,157 @@
+.container-space{
+  padding-bottom: 50px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 800px;
+  float: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: crimson;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 20px 25px;
+    font-size: 16px;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: black;
+}
+
+.Button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.Button:hover{
+  background-color: #2EE59D;
+  color: black;
+  font-weight: bolder;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+.settings-button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 250px;
+  height: 50px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.settings-button:hover{
+  background-color: #2EE59D;
+  color: black;
+  font-weight: bolder;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+}
+
+.btn-group {
+  left: 100px;
+  top: 90px;
+  padding-right: 30%;
+  padding-bottom: 20px;
+}
+
+.active-header {
+  background-color: crimson;
+}
+
+#w3review {
+  font-size: 18px;
+  width: 100%;
+  border-radius: 50px;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+.choice, .choice2 {
+  border-radius: 25px;
+  font-size: 18px;
+  padding-left: 10px;
+  width: 80%;
+  height: 30px;
+}
+
+.OptionNavBar{
+margin-left: 9%;
+}
+.Option2NavBar{
+  margin-left: 2%;
+  }
+ .Option2NewUser{
+  margin-left:35%;
+  color:black;
+  }
+
+.Option3UploadFileHeading{
+  color:black;
+  margin-left:41%;
+}
+.form-div { margin-top: 100px; border: 1px solid #e0e0e0; }
+#profileDisplay { display: block; height: 210px; width: 100%; margin: 0px auto; border-radius: 50%; }
+.img-placeholder {
+  width: 100%;
+  color: white;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  height: 210px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}

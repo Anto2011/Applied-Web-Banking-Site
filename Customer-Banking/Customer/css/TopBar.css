@@ -1,0 +1,44 @@
+body{
+	background-color: #FCF6F5FF; 
+  
+}
+
+.TopBarInfo .H2{
+  font-size: 60px;
+}
+.TopBar{
+    background:#EDC2D8FF;
+    
+    width:82%;
+    height:23%;
+    top:0;
+    margin-left: 18.5%;
+    float:right;
+    position:absolute;
+    border-radius: 25px;
+      
+    }
+    .TopBarInfo{
+      float:left;
+      margin-top:1%;
+      margin-left:2%;
+      
+    }
+
+
+.LowerBar{
+  background:#05affd;
+  width:82%;
+  height:76%;
+  bottom:0;
+  margin-left: 18.5%;
+  float:right;
+  position:absolute;
+  border-radius: 25px;
+}
+
+.LowerBarInfor{
+  float:left;
+  margin-bottom:1%;
+  margin-left:2%;
+}
